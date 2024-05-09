@@ -1,7 +1,10 @@
 import dynamic from 'next/dynamic';
-import { WelcomeScreen } from '@excalidraw/excalidraw';
 
 const Excalidraw = dynamic(async () => (await import('@excalidraw/excalidraw')).Excalidraw, {
+  ssr: false,
+});
+
+const WelcomeScreen = dynamic(async () => (await import('@excalidraw/excalidraw')).WelcomeScreen, {
   ssr: false,
 });
 

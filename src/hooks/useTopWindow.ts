@@ -4,7 +4,9 @@ function useTopWindow() {
   const [isTop, setIsTop] = useState<boolean>(true);
 
   useEffect(() => {
-    setIsTop(window === window.top);
+    setTimeout(() => {
+      setIsTop(window === window.top);
+    }, 16);
   }, []);
 
   return isTop;
